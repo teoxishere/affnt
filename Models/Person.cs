@@ -34,5 +34,7 @@ namespace affnt.Models
         public ICollection<Attribute> Attributes { get; set; }
 
         public ICollection<Match> Matches { get; set; }
+
+        public ApplicationUser ApplicationUser { get; set; }
     }
 }
