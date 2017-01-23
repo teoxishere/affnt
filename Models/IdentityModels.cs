@@ -24,7 +24,9 @@ namespace affnt.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
-
+        public virtual DbSet<Person> Persons { get; set; }
+        public virtual DbSet<Match> Matches { get; set; }
+        public virtual DbSet<Attribute> Attributes { get; set; }
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
