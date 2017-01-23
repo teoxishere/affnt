@@ -22,10 +22,14 @@ namespace affnt.Models
         public string Description { get; set; }
 
         [Required]
-        public char Gender { get; set; }
+        [RegularExpression("[F]+[M]",ErrorMessage ="Only M or F allowed")]
+        [MaxLength(1, ErrorMessage = "M or F")]
+        public string Gender { get; set; }
 
         [Required]
-        public char LookingFor { get; set; }
+        [RegularExpression("[F]+[M]", ErrorMessage = "Only M or F allowed")]
+        [MaxLength(1,ErrorMessage ="M or F")]
+        public string LookingFor { get; set; }
 
         public ICollection<Attribute> Attributes { get; set; }
 
