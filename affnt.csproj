@@ -183,12 +183,25 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PeopleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201701231403379_1stMigration.cs" />
-    <Compile Include="Migrations\201701231403379_1stMigration.Designer.cs">
-      <DependentUpon>201701231403379_1stMigration.cs</DependentUpon>
+    <Compile Include="Migrations\201701251430494_1st.cs" />
+    <Compile Include="Migrations\201701251430494_1st.Designer.cs">
+      <DependentUpon>201701251430494_1st.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701251538129_2Mig.cs" />
+    <Compile Include="Migrations\201701251538129_2Mig.Designer.cs">
+      <DependentUpon>201701251538129_2Mig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701251600175_DbNameChangeonPersons.cs" />
+    <Compile Include="Migrations\201701251600175_DbNameChangeonPersons.Designer.cs">
+      <DependentUpon>201701251600175_DbNameChangeonPersons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701251649471_requiredLook.cs" />
+    <Compile Include="Migrations\201701251649471_requiredLook.Designer.cs">
+      <DependentUpon>201701251649471_requiredLook.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -276,14 +289,24 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\People\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201701231403379_1stMigration.resx">
-      <DependentUpon>201701231403379_1stMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201701251430494_1st.resx">
+      <DependentUpon>201701251430494_1st.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701251538129_2Mig.resx">
+      <DependentUpon>201701251538129_2Mig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701251600175_DbNameChangeonPersons.resx">
+      <DependentUpon>201701251600175_DbNameChangeonPersons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701251649471_requiredLook.resx">
+      <DependentUpon>201701251649471_requiredLook.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -62,7 +62,7 @@ namespace affnt.Models
         public bool RememberMe { get; set; }
     }
 
-    public class RegisterViewModel
+    public class RegisterViewModel:Person
     {
         [Required]
         [EmailAddress]
@@ -79,6 +79,8 @@ namespace affnt.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        public Person Person { get; set; }
     }
 
     public class ResetPasswordViewModel

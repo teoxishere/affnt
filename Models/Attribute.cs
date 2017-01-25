@@ -21,7 +21,7 @@ namespace affnt.Models
 
         public int EzotericAbilities { get; set; }
 
-        public ICollection<Person> Persons { get; set; }
+        public ICollection<Person> People { get; set; }
 
     }
 }

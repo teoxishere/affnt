@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace affnt.Models
@@ -6,7 +7,7 @@ namespace affnt.Models
     public class Person
     {
         [Key]
-        public  int Id { get; set; }
+        public int Id { get; set; }
         [Required]
         [MaxLength(40,ErrorMessage ="Name cannot be longer then 40 characters")]
         public  string Name { get; set; }
@@ -22,13 +23,12 @@ namespace affnt.Models
         public string Description { get; set; }
 
         [Required]
-        [RegularExpression("[F]+[M]",ErrorMessage ="Only M or F allowed")]
         [MaxLength(1, ErrorMessage = "M or F")]
         public string Gender { get; set; }
 
         [Required]
-        [RegularExpression("[F]+[M]", ErrorMessage = "Only M or F allowed")]
         [MaxLength(1,ErrorMessage ="M or F")]
+        [Display(Name="Looking For")]
         public string LookingFor { get; set; }
 
         public ICollection<Attribute> Attributes { get; set; }

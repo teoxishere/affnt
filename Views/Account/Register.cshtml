@@ -1,6 +1,7 @@
 ﻿@model affnt.Models.RegisterViewModel
 @{
     ViewBag.Title = "Register";
+    
 }
 
 <h2>@ViewBag.Title.</h2>
@@ -17,6 +18,49 @@
             @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
         </div>
     </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Age, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Age, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.City, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.City, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Description, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Description, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Gender, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+        @{ 
+                List<string> GenderType = new List<string> { "M", "F" };
+            }
+            @Html.DropDownList("Gender",new SelectList(GenderType),new {@class="form-control" });
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.LookingFor, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @{
+                List<string> LookForType= new List<string> { "M", "F" };
+            }
+            @Html.DropDownList("Looking For", new SelectList(LookForType),new {@class="form-control" });
+        </div>
+    </div>
+
     <div class="form-group">
         @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
