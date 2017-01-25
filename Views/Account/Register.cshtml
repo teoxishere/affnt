@@ -57,7 +57,7 @@
             @{
                 List<string> LookForType= new List<string> { "M", "F" };
             }
-            @Html.DropDownList("Looking For", new SelectList(LookForType),new {@class="form-control" });
+            @Html.DropDownListFor(m=> m.LookingFor, new SelectList(LookForType),new {@class="form-control" });
         </div>
     </div>
 
