@@ -204,6 +204,10 @@
     <Compile Include="Migrations\201701251649471_requiredLook.Designer.cs">
       <DependentUpon>201701251649471_requiredLook.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702020344393_addedFlagToPerson.cs" />
+    <Compile Include="Migrations\201702020344393_addedFlagToPerson.Designer.cs">
+      <DependentUpon>201702020344393_addedFlagToPerson.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Attribute.cs" />
@@ -309,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701251649471_requiredLook.resx">
       <DependentUpon>201701251649471_requiredLook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702020344393_addedFlagToPerson.resx">
+      <DependentUpon>201702020344393_addedFlagToPerson.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

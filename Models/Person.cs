@@ -31,6 +31,8 @@ namespace affnt.Models
         [Display(Name="Looking For")]
         public string LookingFor { get; set; }
 
+        public bool Approval { get; set; }
+
         public ICollection<Attribute> Attributes { get; set; }
 
         public ICollection<Match> Matches { get; set; }

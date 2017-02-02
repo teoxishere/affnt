@@ -41,10 +41,10 @@
         <dd>
             @Html.DisplayFor(model => model.Description)
         </dd>
- <p>
-            @Html.RadioButton("Like",Model.Id)
-            @Html.RadioButton("Dislike",Model.Attributes)
- </p>
+ <div class="jumbotron">
+     <p><a href="/Like/" class="btn btn-primary btn-lg">Like &raquo;</a></p>  
+     <p><a href="/Pass/" class="btn btn-primary btn-lg">Index &raquo;</a></p>     
+ </div>
 
     </dl>
 </div>

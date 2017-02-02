@@ -18,7 +18,8 @@ namespace affnt.Controllers
         public ActionResult Index()
         {
             Person per = db.People
-                        .Where(p => p.LookingFor == "F")
+                        .Where(p => p.Gender == "F")
+                        .Where(p => p.Approval==true)
                         .OrderBy(p => p.City)
                         .FirstOrDefault();
             return View(per);
