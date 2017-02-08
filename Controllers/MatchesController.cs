@@ -19,7 +19,7 @@ namespace affnt.Controllers
         {
             Person per = db.People
                         .Where(p => p.Gender == "F")
-                        .Where(p => p.Approval==true)
+                        .Where(p => p.Approval==false)
                         .OrderBy(p => p.City)
                         .FirstOrDefault();
             return View(per);

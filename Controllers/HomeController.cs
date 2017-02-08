@@ -1,4 +1,5 @@
-﻿using System;
+﻿using affnt.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,7 @@ namespace affnt.Controllers
 {
     public class HomeController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
         public ActionResult Index()
         {
             return View();
@@ -25,6 +27,15 @@ namespace affnt.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+        public ActionResult Matches()
+        {
+            Person per =db.People
+                       .Where(p => p.Gender == "F")
+                       .OrderBy(p => p.City)
+                       .ToList()
+                       .FirstOrDefault();
+            return View(per);
         }
     }
 }

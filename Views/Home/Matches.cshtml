@@ -1,23 +1,18 @@
 ﻿@model affnt.Models.Person
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Matches";
 }
 
-<h2>Index</h2>
+<h2>Matches</h2>
 
 <div>
-    <h4>Person</h4>
+    <h4>
+        @Html.DisplayFor(model=>model.Name)
+    </h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-
+      
         <dt>
             @Html.DisplayNameFor(model => model.Age)
         </dt>
@@ -41,11 +36,13 @@
         <dd>
             @Html.DisplayFor(model => model.Description)
         </dd>
- <div class="jumbotron">
-     @Html.ActionLink("Like", "Like")  
-     @Html.ActionLink("Pass", "Pass")   
- </div>
+
+       
 
     </dl>
 </div>
-
+<p>
+    <a href="Like" class="btn btn-primary btn-lg">Like</a>
+    <a href="Pass" class="btn btn-primary btn-lg">Pass</a>
+       
+</p>
